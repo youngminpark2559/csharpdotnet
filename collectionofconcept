@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   <HEAD>
+      <TITLE>My first HTML document</TITLE>
+     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js" type="text/javascript">    
+    MathJax.Hub.Config({
+        HTML: ["input/TeX","output/HTML-CSS"],
+        TeX: { extensions: ["AMSmath.js","AMSsymbols.js"], 
+               equationNumbers: { autoNumber: "AMS" } },
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX","output/HTML-CSS"],
+        tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                   displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                   processEscapes: true },
+        "HTML-CSS": { availableFonts: ["TeX"],
+                      linebreaks: { automatic: true } }
+    });
+</script>
+   </HEAD>
+   <BODY>
+
+DotnetAssembly <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/DotnetAssembly.png"> <br/><br/>
+
+DotnetProcessAppdomainThreadContext <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/DotnetProcessAppdomainThreadContext2.png"> <br/><br/>
+
+o Active threads can be moved to other AppDomains and Context boundaries by the CLR to fit the perfomance.<br/>
+But it's impossible for a single thread to be working in more than one AppDomain at once.
+
+
+LoadingStoringValueInILcode <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/LoadingStoringValueInILcode.png"> <br/><br/>
+
+DotnetLanguageCompileProcess <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/DotnetLanguageCompileProcess.png"> <br/><br/>
+
+RunDotnetApp <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/RunDotnetApp.png"> <br/><br/>
+
+CreateAssemblyByILlanguage <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/CreateAssemblyByILlanguage.png"> <br/><br/>
+
+DotnetClrCtsClsBaseclass <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/DotnetClrCtsClsBaseclass.png"> <br/><br/>
+
+DotnetVersionHistory <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/DotnetVersionHistory.png"> <br/><br/>
+
+ManagedUnmanagedCodeAppAndPlatform <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/ManagedUnmanagedCodeAppAndPlatform.png"> <br/><br/>
+
+ThreadAndSynchronous <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/ThreadAndSynchronous.png"> <br/><br/>
+
+ConcurrencyByMultithreadAndAsynchronous <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/ConcurrencyByMultithreadAndAsynchronous2.png"> <br/><br/>
+
+AsyncAwait <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/AsyncAwait.png"> <br/><br/>
+
+o The thing you should note is that when you use "async and await" feature you're not going to sure whether the task which you're trying to process asynchronously is processed on another thread or same calling thread.
+That is decided by the CLR, however, CLR allocates the task which you're trying to process asynchronously on another thread against the calling thread as it can as possible. <br/><br/>
+
+
+DelegateAndAsyncButCallingThreadGotBlockedWithWaitingResultFromOtherThread <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/DelegateAndAsyncButCallingThreadGotBlockedWithWaitingResultFromOtherThread.png"> <br/><br/>
+
+AsyncCallBackInDelegate <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/AsyncCallBackInDelegate.png"> <br/><br/>
+
+LockKeywordForPrivateInstanceMethod <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/LockKeywordForPrivateInstanceMethod.png"> <br/><br/>
+
+LockKeywordForPublicMemberOfTheClass <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/LockKeywordForPublicMemberOfTheClass.png"> <br/><br/>
+
+More techniques:
+1.Monitor: This is nothing but a shorthand using for lock keyword.<br/>
+Using lock keyword is converted to the Monitor using after compiled.<br/>
+2.Interlock.<br/>
+3.[Synchronization] attribute.<br/>
+This way can be simple but lazy.<br/>
+The downfall of this way is that this way makes code rigid because all other codes which doesn't need to be thread-safe are also becoming thread-safe.<br/>
+4.ThreadPool.<br/>
+You can pass the method as a argument into WaitCallBack delegate, which you want to execute on secondary threads.<br/>
+Then delegate object containing above methods can be queued into thread pool via QueueUserWorkItem() method.<br/>
+And on the secondary threads against primary thread, you can invoke method which you want to invoke.<br/>
+ThreadPool has pros and cons.<br/>
+
+Serialization <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/Serialization.png"> <br/><br/>
+
+ObjectGraph1 <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/ObjectGraph1.png"> <br/><br/>
+
+ObjectGraph2 <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/ObjectGraph2.png"> <br/><br/>
+
+IFormatterAndIRemotingFormatter <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/IFormatterAndIRemotingFormatter.png"> <br/><br/>
+
+BinaryAndXmlAndSoapDifferences <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/BinaryAndXmlAndSoapDifferences.png"> <br/><br/>
+
+BinaryDataRepresentation <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/BinaryDataRepresentation.png"> <br/><br/>
+
+XmlAttributes <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/XmlAttributes.png"> <br/><br/>
+
+CustomSerialize <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/CustomSerialize.png"> <br/><br/>
+
+chapter13-1 <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/chapter13-1.png"> <br/><br/>
+
+chapter13-2 <br/>
+<img src="https://raw.githubusercontent.com/youngmtool/csharpdotnet/master/pics/chapter13-2.png"> <br/><br/>
+
+
+     
+      
+   </BODY>
+</HTML>
